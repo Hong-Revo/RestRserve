@@ -84,10 +84,34 @@ REST API by registering R functions as handlers http requests." />
   </a>
 </li>
 <li>
-  <a href="../articles/RestRserve.html">Get started</a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/Authentication.html">Authentication</a>
+    </li>
+    <li>
+      <a href="../articles/ContentHandlers.html">ContentHandlers - avoiding boilerplate code with body encoding and decoding</a>
+    </li>
+    <li>
+      <a href="../articles/Logging.html">Logging</a>
+    </li>
+    <li>
+      <a href="../articles/Middleware.html">Middleware</a>
+    </li>
+    <li>
+      <a href="../articles/QuickStart.html">Quick Start Guide</a>
+    </li>
+    <li>
+      <a href="../articles/benchmarks/Benchmarks.html">Benchmarks</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="../news/index.html">Changelog</a>
@@ -289,17 +313,17 @@ Adds endpoint to show <a href='https://swagger.io/tools/swagger-ui/'>Swagger UI<
 <span class='no'>desc_rq</span> <span class='kw'>=</span> <span class='no'>Request</span>$<span class='fu'>new</span>(<span class='kw'>path</span> <span class='kw'>=</span> <span class='st'>"/desc"</span>)
 <span class='no'>say_rq</span> <span class='kw'>=</span> <span class='no'>Request</span>$<span class='fu'>new</span>(<span class='kw'>path</span> <span class='kw'>=</span> <span class='st'>"/say/anonym"</span>, <span class='kw'>parameters_query</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='st'>"message"</span> <span class='kw'>=</span> <span class='st'>"Hola"</span>))
 <span class='co'># process prepared requests</span>
-<span class='no'>app</span>$<span class='fu'>process_request</span>(<span class='no'>not_found_rq</span>)</div><div class='output co'>#&gt; {"timestamp":"2019-11-10 12:25:11.518391","level":"INFO","name":"MW Logger","pid":13843,"msg":"Incomming request (id 23edf540-03b5-11ea-a216-42010a14010e): /no"}
-#&gt; {"timestamp":"2019-11-10 12:25:11.521155","level":"INFO","name":"MW Logger","pid":13843,"msg":"Outgoing response (id 23edf540-03b5-11ea-a216-42010a14010e): 404 Not Found"}</div><div class='output co'>#&gt; &lt;RestRserve Response&gt;
+<span class='no'>app</span>$<span class='fu'>process_request</span>(<span class='no'>not_found_rq</span>)</div><div class='output co'>#&gt; {"timestamp":"2019-11-13 11:46:19.445308","level":"INFO","name":"MW Logger","pid":13991,"msg":"Incomming request (id 3525d4ec-060b-11ea-b74d-42010a140191): /no"}
+#&gt; {"timestamp":"2019-11-13 11:46:19.448230","level":"INFO","name":"MW Logger","pid":13991,"msg":"Outgoing response (id 3525d4ec-060b-11ea-b74d-42010a140191): 404 Not Found"}</div><div class='output co'>#&gt; &lt;RestRserve Response&gt;
 #&gt;   status code: 404 Not Found
-#&gt;   content-type: text/plain</div><div class='input'><span class='no'>app</span>$<span class='fu'>process_request</span>(<span class='no'>status_rq</span>)</div><div class='output co'>#&gt; {"timestamp":"2019-11-10 12:25:11.562411","level":"INFO","name":"MW Logger","pid":13843,"msg":"Incomming request (id 23ee1fc0-03b5-11ea-a216-42010a14010e): /status"}
-#&gt; {"timestamp":"2019-11-10 12:25:11.597622","level":"INFO","name":"MW Logger","pid":13843,"msg":"Outgoing response (id 23ee1fc0-03b5-11ea-a216-42010a14010e): 200 OK"}</div><div class='output co'>#&gt; &lt;RestRserve Response&gt;
+#&gt;   content-type: text/plain</div><div class='input'><span class='no'>app</span>$<span class='fu'>process_request</span>(<span class='no'>status_rq</span>)</div><div class='output co'>#&gt; {"timestamp":"2019-11-13 11:46:19.494813","level":"INFO","name":"MW Logger","pid":13991,"msg":"Incomming request (id 3525ffc6-060b-11ea-b74d-42010a140191): /status"}
+#&gt; {"timestamp":"2019-11-13 11:46:19.530238","level":"INFO","name":"MW Logger","pid":13991,"msg":"Outgoing response (id 3525ffc6-060b-11ea-b74d-42010a140191): 200 OK"}</div><div class='output co'>#&gt; &lt;RestRserve Response&gt;
 #&gt;   status code: 200 OK
-#&gt;   content-type: text/plain</div><div class='input'><span class='no'>app</span>$<span class='fu'>process_request</span>(<span class='no'>desc_rq</span>)</div><div class='output co'>#&gt; {"timestamp":"2019-11-10 12:25:11.628448","level":"INFO","name":"MW Logger","pid":13843,"msg":"Incomming request (id 23ee47d4-03b5-11ea-a216-42010a14010e): /desc"}
-#&gt; {"timestamp":"2019-11-10 12:25:11.629125","level":"INFO","name":"MW Logger","pid":13843,"msg":"Outgoing response (id 23ee47d4-03b5-11ea-a216-42010a14010e): 200 OK"}</div><div class='output co'>#&gt; &lt;RestRserve Response&gt;
+#&gt;   content-type: text/plain</div><div class='input'><span class='no'>app</span>$<span class='fu'>process_request</span>(<span class='no'>desc_rq</span>)</div><div class='output co'>#&gt; {"timestamp":"2019-11-13 11:46:19.562043","level":"INFO","name":"MW Logger","pid":13991,"msg":"Incomming request (id 35262802-060b-11ea-b74d-42010a140191): /desc"}
+#&gt; {"timestamp":"2019-11-13 11:46:19.562770","level":"INFO","name":"MW Logger","pid":13991,"msg":"Outgoing response (id 35262802-060b-11ea-b74d-42010a140191): 200 OK"}</div><div class='output co'>#&gt; &lt;RestRserve Response&gt;
 #&gt;   status code: 200 OK
-#&gt;   content-type: text/plain</div><div class='input'><span class='no'>app</span>$<span class='fu'>process_request</span>(<span class='no'>say_rq</span>)</div><div class='output co'>#&gt; {"timestamp":"2019-11-10 12:25:11.631221","level":"INFO","name":"MW Logger","pid":13843,"msg":"Incomming request (id 23ee7024-03b5-11ea-a216-42010a14010e): /say/anonym"}
-#&gt; {"timestamp":"2019-11-10 12:25:11.632053","level":"INFO","name":"MW Logger","pid":13843,"msg":"Outgoing response (id 23ee7024-03b5-11ea-a216-42010a14010e): 200 OK"}</div><div class='output co'>#&gt; &lt;RestRserve Response&gt;
+#&gt;   content-type: text/plain</div><div class='input'><span class='no'>app</span>$<span class='fu'>process_request</span>(<span class='no'>say_rq</span>)</div><div class='output co'>#&gt; {"timestamp":"2019-11-13 11:46:19.564803","level":"INFO","name":"MW Logger","pid":13991,"msg":"Incomming request (id 35265084-060b-11ea-b74d-42010a140191): /say/anonym"}
+#&gt; {"timestamp":"2019-11-13 11:46:19.565716","level":"INFO","name":"MW Logger","pid":13991,"msg":"Outgoing response (id 35265084-060b-11ea-b74d-42010a140191): 200 OK"}</div><div class='output co'>#&gt; &lt;RestRserve Response&gt;
 #&gt;   status code: 200 OK
 #&gt;   content-type: text/plain</div><div class='input'>
 # run app

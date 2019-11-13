@@ -2,7 +2,12 @@ pandoc: '2.2'
 pkgdown: 1.4.1
 pkgdown_sha: ~
 articles:
-  RestRserve: RestRserve.html
+  Authentication: Authentication.html
+  ContentHandlers: ContentHandlers.html
+  Logging: Logging.html
+  Middleware: Middleware.html
+  QuickStart: QuickStart.html
+  Benchmarks: benchmarks/Benchmarks.html
 urls:
   reference: http://restrserve.org/reference
   article: http://restrserve.org/articles

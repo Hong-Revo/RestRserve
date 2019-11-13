@@ -58,6 +58,21 @@
     <loc>http://restrserve.org/reference/to_json.html</loc>
   </url>
   <url>
-    <loc>http://restrserve.org/articles/RestRserve.html</loc>
+    <loc>http://restrserve.org/articles/Authentication.html</loc>
+  </url>
+  <url>
+    <loc>http://restrserve.org/articles/ContentHandlers.html</loc>
+  </url>
+  <url>
+    <loc>http://restrserve.org/articles/Logging.html</loc>
+  </url>
+  <url>
+    <loc>http://restrserve.org/articles/Middleware.html</loc>
+  </url>
+  <url>
+    <loc>http://restrserve.org/articles/QuickStart.html</loc>
+  </url>
+  <url>
+    <loc>http://restrserve.org/articles/benchmarks/Benchmarks.html</loc>
   </url>
 </urlset>
