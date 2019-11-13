@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HTTP Date class — HTTPDate-class • RestRserve</title>
+<title>Changelog • RestRserve</title>
 
 
 <!-- jquery -->
@@ -35,9 +35,7 @@
 
 
 
-<meta property="og:title" content="HTTP Date class — HTTPDate-class" />
-<meta property="og:description" content="Conversions between POSIXct to HTTP Date objects." />
-<meta name="twitter:card" content="summary" />
+<meta property="og:title" content="Changelog" />
 
 
 
@@ -56,7 +54,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-topic">
+    <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -135,50 +133,20 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>HTTP Date class</h1>
-    <small class="dont-index">Source: <a href='https://github.com/dselivanov/RestRserve/blob/master/R/HTTPDate.R'><code>R/HTTPDate.R</code></a></small>
-    <div class="hidden name"><code>HTTPDate-class.Rd</code></div>
+      <h1>Changelog <small></small></h1>
+      <small>Source: <a href='https://github.com/dselivanov/RestRserve/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div class="ref-description">
-    <p>Conversions between POSIXct to HTTP Date objects.</p>
-    </div>
-
-
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>from</th>
-      <td><p><code>numeric</code>, <code>POSIXct</code> or <code>HTTPDate</code> object.</p></td>
-    </tr>
-    </table>
-
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
-
-    <p><a href='https://tools.ietf.org/html/rfc7231#section-7.1.1.1'>RFC7231</a>
-<a href='https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Date'>MDN</a></p>
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># convert POSIXct to HTTP date string</span>
-<span class='fu'>as</span>(<span class='fl'>0</span>, <span class='st'>"HTTPDate"</span>) <span class='co'># Thu, 01 Jan 1970 00:00:00 GMT</span></div><div class='output co'>#&gt; [1] "Thu, 01 Jan 1970 00:00:00 GMT"
-#&gt; attr(,"class")
-#&gt; [1] "HTTPDate"</div><div class='input'><span class='fu'>as</span>(<span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.time</a></span>(), <span class='st'>"HTTPDate"</span>)</div><div class='output co'>#&gt; [1] "Wed, 13 Nov 2019 13:13:32 GMT"
-#&gt; attr(,"class")
-#&gt; [1] "HTTPDate"</div><div class='input'><span class='co'># parse HTTP date string to POSIXct</span>
-<span class='no'>dt</span> <span class='kw'>=</span> <span class='st'>"Thu, 01 Jan 1970 00:00:00 GMT"</span>
-<span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>dt</span>) <span class='kw'>=</span> <span class='st'>"HTTPDate"</span>
-<span class='fu'>as</span>(<span class='no'>dt</span>, <span class='st'>"POSIXct"</span>)</div><div class='output co'>#&gt; [1] "1970-01-01 GMT"</div></pre>
   </div>
+
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#references">References</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+    <div id="tocnav">
+      <h2>Contents</h2>
+      <ul class="nav nav-pills nav-stacked">
+      </ul>
+    </div>
   </div>
+
 </div>
 
 
